@@ -1,0 +1,17 @@
+[user]
+	email = sotoseattle@gmail.com
+	name = sotoseattle
+[core]
+    editor = nvim
+[color]
+	ui = auto
+[diff]
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = "nvim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
+[difftool]
+	prompt = false
+[alias]
+	graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%C(blue)%x20(%ce)%x20%C(cyan)%C(reset)%n%x20%s%n"
+	stat = status -sb
+	last = log -1 --stat
