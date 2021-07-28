@@ -21,6 +21,7 @@ call plug#begin(expand('~/.vim/plugged'))
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
   " This is complicated... :A
   Plug 'https://github.com/tpope/vim-projectionist'
@@ -40,8 +41,8 @@ call plug#begin(expand('~/.vim/plugged'))
 
   Plug 'elixir-editors/vim-elixir'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
-  " Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+  Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+  " Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
   " Plug 'https://github.com/elixir-lsp/coc-elixir'
 
   Plug 'vim-test/vim-test'
