@@ -1,5 +1,9 @@
 let mapleader=" "
 
+set wildignore+=**/.git/*
+set wildignore+=*.beam
+set wildignore+=**/node_modules/*
+
 " let mapleader='<Space>'
 " set nocompatible                " not needed, default since vim 8
 " filetype plugin indent on       " not needed, default since vim 8
