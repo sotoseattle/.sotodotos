@@ -55,6 +55,9 @@ call plug#begin(expand('~/.vim/plugged'))
   " ranger for nvim
   Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
+  " dashboard
+  Plug 'mhinz/vim-startify'
+
 call plug#end()
 
 let g:ale_fixers = {
@@ -62,16 +65,29 @@ let g:ale_fixers = {
 \    'elixir': ['mix_format'],
 \   }
 let g:ale_fix_on_save = 1
+
 " nmap <silent> ed <Plug>(coc-definition)
 " nmap <silent> er <Plug>(coc-references)
 nnoremap <silent> <leader>co  :<C-u>CocList outline<CR>
 let test#strategy = "neoterm"
+
 " these 'Ctrl mappings' work well when Caps Lock is mapped to Ctrl
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
+
+let g:startify_custom_header = [
+\ "                    /           ",
+\ "    _   _  _/_ ___ / ___ _  ___ ",
+\ "   (_/_(_(_(__(_) /_(_) (__(_)  ",
+\ "  .-/                           ",
+\ " (_/                            ",
+\ "                                ",
+\]
+" let g:startify_custom_header = map(s:startify_ascii_header +
+"         \ startify#fortune#quote(), '"   ".v:val')
 
 "-------------------- PRESENTATION --------------------
 
