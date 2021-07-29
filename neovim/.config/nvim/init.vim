@@ -52,6 +52,9 @@ call plug#begin(expand('~/.vim/plugged'))
   Plug 'vim-test/vim-test'
   Plug 'kassio/neoterm'    " optional, using neoterm as the vim-test runner
 
+  " ranger for nvim
+  Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
 call plug#end()
 
 let g:ale_fixers = {

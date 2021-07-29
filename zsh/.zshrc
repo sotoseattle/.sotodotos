@@ -41,7 +41,6 @@ function code {
 
 # From https://medium.com/better-programming/6-steps-to-a-beautiful-terminal...
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source ~/.scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
