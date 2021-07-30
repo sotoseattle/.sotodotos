@@ -154,6 +154,17 @@ inoremap <silent><expr> <Tab>
 
 "-------------------- REMAPS --------------------
 
+" commonsensical
+nnoremap Y y$           " Yank until the end, not the whole
+nnoremap n nzzzv        " as I move to next, keep centered
+nnoremap N Nzzzv        " as I move to prev, keep centered
+nnoremap J mzJ`z        " as I concat, keep centered
+inoremap , ,<<c-g>u     " make breakpoint to undo only chunks
+inoremap . .<<c-g>u
+inoremap ! !<<c-g>u
+inoremap ? ?<<c-g>u
+
+
 " to move among buffers faster
 map gn :bn<CR>
 map gp :bp<CR>
@@ -165,13 +176,16 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 
-" move lines but in visual mode (shift V to select line)
-xnoremap K :move '<-2<CR>gv-gv
-xnoremap J :move '>+1<CR>gv-gv
+" move lines
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+" nnoremap <leader>j :m .+1<CR>==
+" nnoremap <leader>k :m .-2<CR>==
+" inoremap <C-j> <esc>:m .+1<CR>==
+" inoremap <C-k> <esc>:m .-2<CR>==
 
 map <F1> :colorscheme gruvbox<CR>
 map <F2> :colorscheme nord<CR>
-
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
