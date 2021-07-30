@@ -58,6 +58,9 @@ call plug#begin(expand('~/.vim/plugged'))
   " dashboard
   Plug 'mhinz/vim-startify'
 
+  " whichkey
+  Plug 'liuchengxu/vim-which-key'
+
 call plug#end()
 
 let g:ale_fixers = {
@@ -88,6 +91,8 @@ let g:startify_custom_header = [
 \]
 " let g:startify_custom_header = map(s:startify_ascii_header +
 "         \ startify#fortune#quote(), '"   ".v:val')
+
+source $HOME/.config/nvim/keys/which-key.vim
 
 "-------------------- PRESENTATION --------------------
 
