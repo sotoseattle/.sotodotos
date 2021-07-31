@@ -183,4 +183,6 @@ nmap <leader>gs :G<CR>
 
 map <leader>go :Goyo<CR>
 
+nnoremap <leader>tt :term<CR>
+
 map <C-s> :source ~/.config/nvim/init.vim<CR>
