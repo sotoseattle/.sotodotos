@@ -61,6 +61,9 @@ call plug#begin(expand('~/.vim/plugged'))
   " whichkey
   Plug 'liuchengxu/vim-which-key'
 
+  " sneak
+  Plug 'justinmk/vim-sneak'
+
 call plug#end()
 
 let g:ale_fixers = {
