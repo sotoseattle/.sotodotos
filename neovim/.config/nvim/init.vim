@@ -162,10 +162,11 @@ nnoremap Y y$           " Yank until the end, not the whole
 nnoremap n nzzzv        " as I move to next, keep centered
 nnoremap N Nzzzv        " as I move to prev, keep centered
 nnoremap J mzJ`z        " as I concat, keep centered
-inoremap , ,<<c-g>u     " make breakpoint to undo only chunks
-inoremap . .<<c-g>u
-inoremap ! !<<c-g>u
-inoremap ? ?<<c-g>u
+
+" inoremap , ,<c-g>u      " make breakpoint to undo only chunks,
+" inoremap . .<c-g>u      " something wrong, the comma also pastes register
+" inoremap ! !<c-g>u
+" inoremap ? ?<c-g>u
 
 
 " to move among buffers faster
