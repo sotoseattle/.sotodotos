@@ -2,8 +2,6 @@ export PATH=/opt/homebrew/bin:$PATH
 
 #### FOLLOWING https://scriptingosx.com/2019/06/moving-to-zsh/
 
-export TERM=xterm-256color
-
 # don't differentiate between low and upcase
 # eg. using ls change with -> setopt GLOB_COMPLETE
 setopt NO_CASE_GLOB
