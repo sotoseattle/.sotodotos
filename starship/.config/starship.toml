@@ -1,0 +1,40 @@
+[line_break]
+disabled = false
+
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[λ](green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[❯](fg:124) "
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[directory]
+truncation_length = 8
+style = "fg:75"
+
+[cmd_duration]
+style = "fg:yellow"
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+[elixir]
+symbol = "🔮 "
+
+[git_branch]
+style = "fg:221"
+[git_metrics]
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+[git_status]
+
+[status]
+style = "fg:124"
+symbol = "🔴"
+format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = false
+disabled = false
