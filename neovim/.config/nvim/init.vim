@@ -45,7 +45,7 @@ call plug#begin(expand('~/.vim/plugged'))
 
   Plug 'elixir-editors/vim-elixir'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+  " Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
   " Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
   " Plug 'https://github.com/elixir-lsp/coc-elixir'
 
@@ -72,9 +72,14 @@ let g:ale_fixers = {
 \   }
 let g:ale_fix_on_save = 1
 
-" nmap <silent> ed <Plug>(coc-definition)
-" nmap <silent> er <Plug>(coc-references)
 nnoremap <silent> <leader>co  :<C-u>CocList outline<CR>
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+" nmap <silent> <leader> cd <Plug>(coc-definition)
+" nmap <silent> <leader> cy <Plug>(coc-type-definition)
+" nmap <silent> <leader> cm <Plug>(coc-implementation)
+" nmap <silent> <leader> cr <Plug>(coc-references)
+
 let test#strategy = "neoterm"
 
 " these 'Ctrl mappings' work well when Caps Lock is mapped to Ctrl

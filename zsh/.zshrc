@@ -26,20 +26,21 @@ alias mv="mv -i"
 export GREP_OPTIONS='--color=auto'
 
 # Visual Studio Code -> to open with code .
-function code {
-    if [[ $# = 0 ]]
-    then
-        open -a "Visual Studio Code"
-    else
-        local argPath="$1"
-        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
-        open -a "Visual Studio Code" "$argPath"
-    fi
-}
+# function code {
+#     if [[ $# = 0 ]]
+#     then
+#         open -a "Visual Studio Code"
+#     else
+#         local argPath="$1"
+#         [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+#         open -a "Visual Studio Code" "$argPath"
+#     fi
+# }
 
 # From https://medium.com/better-programming/6-steps-to-a-beautiful-terminal...
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# export FZF_DEFAULT_OPTS='--extended --height 40% --layout reverse --info inline --border --preview "bat --style=numbers --color=always --line-range :500 {}"'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS='--extended --height 40% --layout reverse --info inline --border --preview "bat --style=numbers --color=always --line-range :500 {}"'
+eval "$(starship init zsh)"
