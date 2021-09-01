@@ -20,6 +20,7 @@ call plug#begin(expand('~/.vim/plugged'))
   " theme
   Plug 'morhetz/gruvbox'
   Plug 'arcticicestudio/nord-vim'
+  Plug 'ayu-theme/ayu-vim'
 
   " these 3 are needed for telescope <space> ff
   Plug 'nvim-lua/popup.nvim'
@@ -148,18 +149,6 @@ set statusline+=\ [%n]             " [buffer number]
 
 
 
-"-------------------- no idea... --------------------
-
-" use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-inoremap <silent><expr> <Tab>
-     \ pumvisible() ? "\<C-n>" :
-     \ <SID>check_back_space() ? "\<Tab>" :
-     \ coc#refresh()
-
 "-------------------- REMAPS --------------------
 
 " commonsensical
@@ -195,6 +184,7 @@ vnoremap K :m '<-2<CR>gv=gv
 
 map <F1> :colorscheme gruvbox<CR>
 map <F2> :colorscheme nord<CR>
+map <F3> :colorscheme ayu<CR>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>

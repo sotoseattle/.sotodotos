@@ -1,4 +1,5 @@
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=/Users/sotoseattle/Library/Python/3.9/bin:$PATH
 
 #### FOLLOWING https://scriptingosx.com/2019/06/moving-to-zsh/
 
