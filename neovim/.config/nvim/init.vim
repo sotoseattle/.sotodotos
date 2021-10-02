@@ -3,6 +3,7 @@ let mapleader=" "
 set wildignore+=**/.git/*
 set wildignore+=*.beam
 set wildignore+=**/node_modules/*
+set termguicolors
 
 " let mapleader='<Space>'
 " set nocompatible                " not needed, default since vim 8
@@ -65,6 +66,12 @@ call plug#begin(expand('~/.vim/plugged'))
   " sneak
   Plug 'justinmk/vim-sneak'
 
+  " prettier for javascript coding
+  Plug 'prettier/vim-prettier', {
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+
 call plug#end()
 
 let g:ale_fixers = {
@@ -102,6 +109,10 @@ let g:startify_custom_header = [
 "         \ startify#fortune#quote(), '"   ".v:val')
 
 source $HOME/.config/nvim/keys/which-key.vim
+
+" automatic completion of coc
+inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
+inoremap <silent><expr> <cr> "\<c-g>u\<CR>"
 
 "-------------------- PRESENTATION --------------------
 
@@ -185,6 +196,9 @@ vnoremap K :m '<-2<CR>gv=gv
 map <F1> :colorscheme gruvbox<CR>
 map <F2> :colorscheme nord<CR>
 map <F3> :colorscheme ayu<CR>
+map <F5> :let ayucolor="light"<CR>
+map <F6> :let ayucolor="mirage"<CR>
+map <F7> :let ayucolor="dark"<CR>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -199,3 +213,8 @@ map <leader>go :Goyo<CR>
 nnoremap <leader>tt :term<CR>
 
 map <C-s> :source ~/.config/nvim/init.vim<CR>
+
+
+" when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 0
+autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
