@@ -13,6 +13,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- needed for Obsidian to display bullets and check boxes
+vim.opt.conceallevel = 1
+
 require("vim-keybindings")
 require("lazy").setup("plugins", {})
 
