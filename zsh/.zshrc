@@ -124,6 +124,8 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
+alias oo="cd $HOME/Desktop/Sotolog"
+
 export GREP_OPTIONS='--color=auto'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
