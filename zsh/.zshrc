@@ -124,7 +124,7 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
-alias oo="cd $HOME/vaults/sotolog"
+alias oo="cd $HOME/Dropbox/sotolog"
 
 export GREP_OPTIONS='--color=auto'
 

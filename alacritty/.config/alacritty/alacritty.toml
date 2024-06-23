@@ -17,6 +17,7 @@ opacity = 1.0
 blur = false
 
 [font]
+#normal.family = "MesloLGS Nerd Font Mono"
 normal.family = "MesloLGS Nerd Font Mono"
 
-size = 18
+size = 16

@@ -14,6 +14,11 @@ vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = "#9C1D1D"})
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = "#07793C"})
 
+vim.keymap.set('n', '<C-n>', ':bnext<CR>')
+vim.keymap.set('n', '<C-p>', ':bprevious<CR>')
+vim.keymap.set('n', '<C-d>', ':bdelete<CR>')
+
+
 vim.cmd("set guicursor=n-v-c:block")
 vim.cmd("set guicursor=i-ci:ver30")
 vim.cmd("set relativenumber")
