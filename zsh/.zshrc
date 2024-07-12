@@ -124,6 +124,8 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
+alias tmuxo="tmux new -s maino"
+
 alias oo="cd $HOME/Dropbox/sotolog"
 
 alias bato='fzf --preview="bat --color=always {}"'
