@@ -126,6 +126,9 @@ alias mv="mv -i"
 
 alias oo="cd $HOME/Dropbox/sotolog"
 
+alias bato='fzf --preview="bat --color=always {}"'
+alias vato='neovim $(fzf -m --preview="bat --color=always {}")'
+
 export GREP_OPTIONS='--color=auto'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
